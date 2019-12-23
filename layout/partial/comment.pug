@@ -1,6 +1,7 @@
 if theme.gitalk.enable
     link(rel="stylesheet", href=url_for("lib/gitalk.css"))
     script(src=url_for("lib/gitalk.min.js"))
+    script(src=url_for("lib/md5.min.js"))
     .gitalk#gitalk-container
     script.
         var gitalk = new Gitalk({
@@ -9,8 +10,7 @@ if theme.gitalk.enable
             repo: '!{theme.gitalk.repo}',
             owner: '!{theme.gitalk.owner}',
             admin: ['!{theme.gitalk.admin}'],
-            //- id: location.pathname,
-            id: 'Demo',
+            id: md5(location.pathname),
             distractionFreeMode: '!{theme.gitalk.distractionFreeMode}',  // Facebook-like distraction free mode
             pagerDirection: 'last'
         })

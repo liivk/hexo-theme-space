@@ -2,8 +2,7 @@ menu:
   Blog: /
   Archive: /archives
   categories: /categories
-  GitHub: https://github.com/pinggod
-  Rss: /atom.xml
+  GitHub: https://github.com/liivk
 
 favicon: /favicon.png
 logo: /favicon.png
@@ -11,19 +10,24 @@ logo: /favicon.png
 # Comment
 gitalk:
   enable: true # true
-  clientID: 'e46f6dec7c07145c652c' # GitHub Application Client ID
-  clientSecret: 'd1a0b627f9b76d21bd3080d1777d0aa0ad55dd83' # Client Secret
-  repo: 'gitalk' # Repository name
-  owner: 'gitalk' # GitHub ID
-  admin: 'booxood' # GitHub ID
+  clientID: '' # GitHub Application Client ID
+  clientSecret: '' # Client Secret
+  repo: '' # Repository name
+  owner: '' # GitHub ID
+  admin: '' # GitHub ID
   distractionFreeMode: false # true
 
-# Analytics
-# google-analytics:
-# ga: UA-xxxxxxxx-x
+# 访问量统计(不蒜子)
+busuanzi: true
+
+# 是否启用搜索
+search: true
 
 # Copyright Infomation
-startyear: 2015
+startyear: 2019
+
+# 是否在文章中显示上一篇/下一篇
+prev_next: true
 
 # less
 less:

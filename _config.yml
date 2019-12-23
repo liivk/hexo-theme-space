@@ -1,17 +1,22 @@
 menu:
-    Blog: /
-    Archive: /archives
-    categories: /categories
-    GitHub: https://github.com/pinggod
-    Rss: /atom.xml
+  Blog: /
+  Archive: /archives
+  categories: /categories
+  GitHub: https://github.com/pinggod
+  Rss: /atom.xml
 
 favicon: /favicon.png
 logo: /favicon.png
 
 # Comment
-# e.g disqus: seansun
-disqus:
-duoshuo:
+gitalk:
+  enable: true # true
+  clientID: 'e46f6dec7c07145c652c' # GitHub Application Client ID
+  clientSecret: 'd1a0b627f9b76d21bd3080d1777d0aa0ad55dd83' # Client Secret
+  repo: 'gitalk' # Repository name
+  owner: 'gitalk' # GitHub ID
+  admin: 'booxood' # GitHub ID
+  distractionFreeMode: false # true
 
 # Analytics
 # google-analytics:

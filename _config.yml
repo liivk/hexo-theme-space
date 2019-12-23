@@ -1,7 +1,7 @@
 menu:
     Blog: /
-    Archive: /archives/
-    Weibo: http://weibo.com/sunchongsheng
+    Archive: /archives
+    categories: /categories
     GitHub: https://github.com/pinggod
     Rss: /atom.xml
 
@@ -19,3 +19,7 @@ duoshuo:
 
 # Copyright Infomation
 startyear: 2015
+
+# less
+less:
+  paths: ['source/css']

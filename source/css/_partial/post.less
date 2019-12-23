@@ -6,7 +6,12 @@
     .post-title {
         margin: 0.65em 0;
         color: #2c3e50;
-        font-size: 1.5em;
+        & h1 {
+            font-size: 2em;
+        }
+        & h2 {
+            font-size: 1.5em;
+        }
     }
 
     .post-info {
@@ -67,8 +72,7 @@
         max-width: 100%;
         margin: 1em auto;
     }
-    & > table,
-    & > figure.highlight {
+    & > table {
         box-shadow: 0 1px 2px rgba(0,0,0,0.125);
     }
     .tip {
@@ -138,9 +142,12 @@ pre {
         display: none;
     }
     .code pre {
+        background: #2d2d2d;
         padding: 1.2em 1.4em;
         line-height: 1.5em;
         margin: 0;
+        color: #e8eaf6;
+        border-radius: 0.35rem;
         .line {
             width: auto;
             height: 18px;
@@ -148,7 +155,7 @@ pre {
     }
 }
 
-%code-base {
+.code-base() {
     position: absolute;
     top: 0;
     right: 0;
@@ -161,17 +168,19 @@ pre {
     font-weight: 600;
 }
 
-@mixin code-signs($keys) {
-    @each $key in $keys {
-        .highlight.#{$key} .code:after {
-            content: to-upper-case($key);
-            @extend %code-base;
-        }
+.code-signs(@keys, @i: 1) when(@i =< length(@keys)) {
+    @key: extract(@keys, @i);
+    @keyNoComma: e(@key);
+    .highlight.@{keyNoComma} .code:after {
+        content: @key;
+        .code-base;
     }
+    .code-signs(@keys, (@i + 1));
 }
 
-$signs: ("html", "js", "bash", "css", "scss","diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
-@include code-signs($signs);
+@signs: "html", "js", "bash", "css", "scss","diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts";
+
+.code-signs(@signs);
 
 .highlight.cpp .code:after {
     content: 'C++';

@@ -1,0 +1,8 @@
+extends partial/layout
+
+block container
+    h1.categories!=  __('prev_post')
+    .category-all!= list_categories(site.categories, { show_count: false })
+
+block copyright
+    include partial/copyright

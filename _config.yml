@@ -1,8 +1,8 @@
 menu:
   Blog: /
+  Categories: /categories
   Archive: /archives
-  categories: /categories
-  GitHub: https://github.com/liivk
+  About: /about
 
 favicon: /favicon.png
 logo: /favicon.png

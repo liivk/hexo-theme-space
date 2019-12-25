@@ -16,5 +16,5 @@ mixin post()
                 a.prev(href=url_for(prev))!= __('prev_post')
             if next
                 a.next(href=url_for(next))!= __('next_post')
-    else
+    else if theme.gitalk.enable
         .paginator-line

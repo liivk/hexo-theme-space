@@ -1,11 +1,11 @@
 .copyright
     - var hexoURL = "https://hexo.io/";
-    - var apolloURL = "https://github.com/pinggod/hexo-theme-apollo";
+    - var spaceURL = "https://github.com/liivk/hexo-theme-space";
     - var currentDate = new Date();
     - var year = currentDate.getFullYear();
     - year = year == theme.startyear ? year : theme.startyear + ' - ' + year;
-    p © #{year} #[a(href=config.url)!= config.author], powered by #[a(href=hexoURL, target="_blank") Hexo] and #[a(href=apolloURL, target="_blank") hexo-theme-apollo].
-
-if theme.busuanzi
-    .busuanzi
-        <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    p
+        if theme.busuanzi
+            span.copyright-busuanzi#busuanzi_container_site_pv PV: #[span#busuanzi_value_site_pv]
+        span.copyright-desction.
+            © #{year} #[a(href=config.url)!= config.author], Power by #[a(href=hexoURL, target="_blank") Hexo] | #[a(href=spaceURL, target="_blank") Space]

@@ -9,7 +9,7 @@ logo: /favicon.png
 
 # Comment
 gitalk:
-  enable: true # true
+  enable: false # true
   clientID: '' # GitHub Application Client ID
   clientSecret: '' # Client Secret
   repo: '' # Repository name
@@ -29,6 +29,6 @@ startyear: 2019
 # 是否在文章中显示上一篇/下一篇
 prev_next: true
 
-# less
+# less目录
 less:
   paths: ['source/css']

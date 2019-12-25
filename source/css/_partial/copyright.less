@@ -1,13 +1,25 @@
 footer {
     padding-bottom: 1px;
     .copyright {
-        margin: 4em 0;
+        margin: 4em 0 2em;
         border-top: 1px solid #ddd;
-        text-align: center;
-        p, a {
+        p {
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        span, a {
             color: #aaa;
             font-size: 14px;
             font-weight: 100;
+        }
+        .copyright-busuanzi {
+            flex: 1;
+        }
+        .copyright-desction {
+            flex: 1;
+            text-align: right;
         }
         a:hover {
             color: #888;

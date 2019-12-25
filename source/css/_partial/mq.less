@@ -1,5 +1,12 @@
 main.container {
-    margin: 2em 10px;
+    margin: 0 10px 2em;
+    flex: 1;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -8,7 +15,7 @@ main.container {
         margin: 0 auto;
     }
     header {
-        padding: 20px 100px;
+        padding: 20px 0;
     }
 }
 
@@ -42,8 +49,7 @@ main.container {
             left: 15px;
         }
     }
-    .ds-thread,
-    #disqus_thread {
-        margin: 2em 10px;
+    .gitalk {
+        margin: 0 10px;
     }
 }

@@ -1,0 +1,8 @@
+extends partial/layout
+
+block container
+    h1.tags!=  __('prev_post')
+    .tag-all!= list_tags(site.tags, { show_count: false })
+
+block copyright
+    include partial/copyright

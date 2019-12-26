@@ -1,28 +1,20 @@
 'use strict';
 
 $(function () {
-  if (!$('#local-search').size()) {
-    const path = "/search.xml";
+  if ($('#local-search').size()) {
+    const path = "/search.json";
     const search_id = "local-search-input";
     const content_id = "local-search-result";
     const BTN = "<button type='button' class='local-search-close' id='local-search-close'></button>";
     $.ajax({
       url: path,
       dataType: "json",
-      success: function (response) {
-        // get the contents from search data
-        var datas = $("entry", response).map(function () {
-          return {
-            title: $("title", this).text(),
-            content: $("content", this).text(),
-            url: $("url", this).text()
-          };
-        }).get();
+      success: function (response) { // get the contents from search data
+        const $input = document.getElementById(search_id);
+        const $resultContent = document.getElementById(content_id);
+        console.log(response)
 
-        var $input = document.getElementById(search_id);
-        var $resultContent = document.getElementById(content_id);
-
-        $input.addEventListener('input', function () {
+        $input && $input.addEventListener('input', function () {
           var str = '<ul class="search-result-list">';
           var keywords = this.value.trim().toLowerCase().split(/[\s]+/);
           $resultContent.innerHTML = "";
@@ -30,7 +22,7 @@ $(function () {
             return;
           }
           // perform local searching
-          datas.forEach(function (data) {
+          response.forEach(function (data) {
             var isMatch = true;
             // var content_index = [];
             if (!data.title || data.title.trim() === '') {

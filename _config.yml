@@ -4,8 +4,8 @@ menu:
   Archive: /archives
   About: /about
 
-favicon: /favicon.png
-logo: /favicon.png
+favicon: /default_favicon.png
+logo: /default_favicon.png
 
 # Comment
 gitalk:

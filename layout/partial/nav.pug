@@ -6,5 +6,6 @@ ul.nav.nav-list
             - var act = !re.test(value) && page.path.replace(/\/?index.html$/, '') === value.replace(/^\//, '')
             a.nav-list-link(class={active: act} href=url_for(value) target=tar)
                 != key.toUpperCase()
-    if theme.search
-        li.nav-list-item#local-search SEARCH
+    if theme.search.enable
+        li.nav-list-item
+            a.nav-list-link#local_search_button!= theme.search.menu

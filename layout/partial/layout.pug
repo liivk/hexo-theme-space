@@ -14,4 +14,6 @@ html(lang=config.language)
             footer
                 block pagination
                 block copyright
+            if theme.search.enable
+                include search
         include scripts

@@ -1,7 +1,7 @@
 extends partial/layout
 
 block container
-    h1.categories!=  __('prev_post')
+    h1.categories!=  __('categories')
     .category-all!= list_categories(site.categories, { show_count: false })
 
 block copyright

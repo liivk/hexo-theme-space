@@ -1,11 +1,15 @@
 'use strict';
 
 $(function () {
-  if ($('#local-search').size()) {
+  if ($('#local_search_button').size()) {
     const path = "/search.json";
     const search_id = "local-search-input";
     const content_id = "local-search-result";
     const BTN = "<button type='button' class='local-search-close' id='local-search-close'></button>";
+
+    const $body = $('html, body');
+    const $searchWrap = $('#local_search_wrap');
+
     $.ajax({
       url: path,
       dataType: "json",
@@ -97,9 +101,22 @@ $(function () {
         });
       }
     });
+
     $(document).on('click', '#local-search-close', function () {
       $('#local-search-input').val('');
       $('#local-search-result').html('');
     });
+
+    $(document).on('click', '#local_search_button', function () {
+      $body.addClass('noscroll');
+      $searchWrap.addClass('show');
+    })
+
+    $(document).keydown(function (e) {
+      if (e.keyCode == 27 && $searchWrap.hasClass('show')) {
+        $searchWrap.removeClass('show');
+        $body.removeClass('noscroll')
+      }
+    })
   }
 })

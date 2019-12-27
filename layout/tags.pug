@@ -1,7 +1,7 @@
 extends partial/layout
 
 block container
-    h1.tags!=  __('prev_post')
+    h1.tags!=  __('tags')
     .tag-all!= list_tags(site.tags, { show_count: false })
 
 block copyright

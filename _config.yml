@@ -21,7 +21,9 @@ gitalk:
 busuanzi: true
 
 # 是否启用搜索
-search: true
+search: 
+  enable: true
+  menu: SEARCH
 
 # Copyright Infomation
 startyear: 2019
